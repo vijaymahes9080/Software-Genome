@@ -1,0 +1,6 @@
+apiVersion: v2
+name: software-genome-app
+description: Helm chart for Software Genome Synthesized Microservice Architecture
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
