@@ -1,12 +1,14 @@
 # 🧬 Software Genome (SGX)
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/vijaymahes9080/Software-Genome)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-brightgreen.svg?logo=github)](https://vijaymahes9080.github.io/Software-Genome/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![IP Shield](https://img.shields.io/badge/IP%20Shield-0.0%25%20Verbatim%20Match-blue.svg)](docs/ARCHITECTURE.md)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](package.json)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/vijaymahes9080/Software-Genome)
 
 > **Software Genome** is an AI-native software engineering & reverse-engineering platform that learns the DNA of existing applications across 8 structural layers and synthesizes entirely new application architectures based on user requirements.
+
+🌐 **Live Web Application**: [https://vijaymahes9080.github.io/Software-Genome/](https://vijaymahes9080.github.io/Software-Genome/)
 
 ---
 
