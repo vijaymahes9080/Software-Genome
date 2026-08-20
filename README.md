@@ -12,13 +12,18 @@
 
 ---
 
+## 🎨 Visual Showcase & Complete Image Gallery
+
+### 1. Platform Hero Banner
 ![Software Genome Light Theme Hero Banner](images/hero.png)
 
-## 🎨 Visual Showcase & Architecture Pipeline
-
-| Light Theme Software Studio | 8-Layer Synthesis Pipeline |
+### 2. Studio Dashboard & 8-Layer Architecture Pipeline
+| 💻 Light Theme Software Studio UI | 🧬 8-Layer Synthesis Pipeline |
 | :---: | :---: |
 | ![Light Theme Studio UI](images/ui-showcase.png) | ![Pipeline Architecture Diagram](images/pipeline-diagram.png) |
+
+### 3. LinkedIn Post & Technical Announcement Graphic
+![Software Genome LinkedIn Showcase Image](image.png)
 
 ---
 
