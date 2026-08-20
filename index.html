@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Genome (SGX) - AI Application Synthesis Platform</title>
+  <meta name="description" content="AI-native software engineering platform that deconstructs existing applications, builds a genome graph, and synthesizes novel application architectures from learned engineering patterns.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Top Navigation Bar -->
+    <header class="top-navbar">
+      <div class="brand-section">
+        <div class="brand-logo-icon">🧬</div>
+        <div class="brand-title-group">
+          <h1>Software Genome</h1>
+          <p>AI Software Engineering & Synthesis Platform</p>
+        </div>
+      </div>
+
+      <nav class="nav-tabs">
+        <button class="nav-tab-btn active" data-tab="tab-upload">
+          <span>📥 Application Ingestion</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="tab-layers">
+          <span>🎨 8-Layer Inspector</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="tab-graph">
+          <span>🌐 Genome Graph</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="tab-synthesizer">
+          <span>⚡ Architecture Synthesizer</span>
+        </button>
+      </nav>
+
+      <div class="header-status-pill">
+        <span class="status-dot"></span>
+        <span>10 Benchmarks Analyzed</span>
+      </div>
+    </header>
+
+    <!-- Main View Content -->
+    <main class="main-content">
+
+      <!-- TAB 1: Application Upload & Benchmark Ingestion Center -->
+      <section id="tab-upload" class="tab-view active">
+        <div class="hero-banner">
+          <div class="hero-content">
+            <h2>AI-Native Software Deconstruction</h2>
+            <p>
+              Upload 10 existing applications or choose from analyzed benchmark suites. Software Genome extracts structural engineering patterns across UX, Data, Architecture, Security, and AI layers—enabling synthesis of novel application architectures.
+            </p>
+          </div>
+        </div>
+
+        <div class="dropzone-card" id="uploadDropzone">
+          <div class="dropzone-icon">📁</div>
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">Upload Application Source, Repositories, or APK/ZIP Packages</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Drag & drop files or click to upload 10 target applications for multi-genome deconstruction</p>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 2rem; margin-bottom: 1rem;">
+          <h3 style="font-weight: 700; font-size: 1.2rem; color: var(--accent-cyan);">Analyzed Benchmark Suite (Property & Marketplace Genomes)</h3>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Select any app to inspect extracted DNA</span>
+        </div>
+
+        <div class="apps-grid" id="benchmarkAppsGrid">
+          <!-- Populated by app.js -->
+        </div>
+      </section>
+
+      <!-- TAB 2: 8-Layer Genome Inspector -->
+      <section id="tab-layers" class="tab-view">
+        <div style="margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--text-main);">8-Layer Software Genome Extractor</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Deep structural breakdown across 8 critical engineering dimensions.</p>
+        </div>
+
+        <div class="genome-layers-layout">
+          <div class="layer-selector-list" id="genomeLayerList">
+            <!-- Populated by app.js -->
+          </div>
+
+          <div class="genome-detail-panel" id="genomeLayerDetailPanel">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: Interactive Genome Graph Canvas -->
+      <section id="tab-graph" class="tab-view">
+        <div style="margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between;">
+          <div>
+            <h2 style="font-size: 1.5rem; font-weight: 700;">Interactive Genome Graph & Lineage Engine</h2>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">Visualize engineering gene relationships, frequency of reuse, and structural lineage.</p>
+          </div>
+        </div>
+
+        <div class="graph-view-container">
+          <div class="graph-toolbar">
+            <button class="graph-filter-btn active" data-layer="all">All Layers</button>
+            <button class="graph-filter-btn" data-layer="ux">UX</button>
+            <button class="graph-filter-btn" data-layer="data">Data</button>
+            <button class="graph-filter-btn" data-layer="architecture">Architecture</button>
+            <button class="graph-filter-btn" data-layer="pattern">Pattern</button>
+            <button class="graph-filter-btn" data-layer="security">Security</button>
+            <button class="graph-filter-btn" data-layer="performance">Performance</button>
+            <button class="graph-filter-btn" data-layer="ai">AI</button>
+            <button class="graph-filter-btn" data-layer="integration">Integration</button>
+          </div>
+
+          <!-- Interactive Inspector Drawer -->
+          <div class="node-inspector-drawer" id="nodeInspectorDrawer">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span class="pattern-badge" id="nodeTypeBadge">GENE NODE</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);" id="nodeLayerText">UX LAYER</span>
+            </div>
+            <h3 id="nodeTitle" style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--accent-cyan);">Node Title</h3>
+            <p id="nodeDescription" style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.8rem; line-height: 1.4;">Description</p>
+            <div style="background: rgba(255,255,255,0.03); padding: 0.6rem; border-radius: 8px; border: 1px solid var(--border-color);">
+              <div style="font-size: 0.75rem; color: var(--accent-emerald); font-weight: 600;" id="nodeLineageText">Synthesized in 9/10 apps</div>
+            </div>
+          </div>
+
+          <canvas id="genomeGraphCanvas"></canvas>
+        </div>
+      </section>
+
+      <!-- TAB 4: Architecture Synthesizer & Code Generator -->
+      <section id="tab-synthesizer" class="tab-view">
+        <div style="margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.5rem; font-weight: 700;">Requirements → Application Synthesizer</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Specify custom product requirements to synthesize a novel architecture combining extracted genome patterns.</p>
+        </div>
+
+        <div class="synthesizer-grid">
+          <!-- Prompt & Control Console -->
+          <div class="prompt-panel">
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;">Target Application Requirements</h3>
+            <textarea id="promptTextarea" class="prompt-textarea" placeholder="Describe your target application...">Build a rural property marketplace for India with multilingual support, GIS maps, offline capability and AI recommendations.</textarea>
+            
+            <div style="margin-bottom: 1.2rem;">
+              <span style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-bottom: 0.4rem;">Sample Benchmark Prompts:</span>
+              <span class="preset-prompt-pill">Build a rural property marketplace for India with multilingual support, GIS maps, offline capability and AI recommendations.</span>
+              <span class="preset-prompt-pill">High-concurrency luxury rental platform with instant video tours and crypto escrow.</span>
+              <span class="preset-prompt-pill">Agricultural land exchange with automated soil yield evaluation and WhatsApp sync.</span>
+            </div>
+
+            <button class="btn-primary" id="synthesizeBtn">
+              ⚡ Synthesize Architecture & Generate Application
+            </button>
+
+            <!-- Lineage Tracing Box -->
+            <div id="lineageTracingBox" style="margin-top: 1.5rem;">
+              <!-- Rendered by app.js -->
+            </div>
+          </div>
+
+          <!-- Code & IP Safeguard Viewer Panel -->
+          <div class="code-viewer-panel">
+            <div class="code-tabs-header">
+              <button class="code-tab-btn active" data-code="frontend">📄 App.jsx (Frontend)</button>
+              <button class="code-tab-btn" data-code="backend">⚙️ server.js (Backend API)</button>
+              <button class="code-tab-btn" data-code="schema">🗄️ schema.sql (PostGIS DB)</button>
+              <button class="code-tab-btn" data-code="openapi">🔗 openapi.json (API Spec)</button>
+              <button class="code-tab-btn" data-code="tests">🧪 property.test.js (Tests)</button>
+              <button class="code-tab-btn" data-code="docker">🐳 Dockerfile & CI/CD</button>
+            </div>
+
+            <!-- Code Display Block -->
+            <div class="code-display-block" id="codeDisplayBlock">
+              // Click "Synthesize Architecture & Generate Application" to view generated code bundles
+            </div>
+
+            <!-- IP & License Safeguard Metrics Footer -->
+            <div class="ip-audit-box">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span style="font-size: 1.2rem;">🛡️</span>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.85rem; color: var(--accent-emerald);">IP & License Safeguard Audit</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">Pattern abstraction verified — Zero verbatim code reproduction</div>
+                </div>
+              </div>
+              <div class="audit-metric-group">
+                <div class="audit-metric">
+                  <div class="audit-metric-val" id="fitnessScoreVal">94%</div>
+                  <div class="audit-metric-lbl">Fitness Score</div>
+                </div>
+                <div class="audit-metric">
+                  <div class="audit-metric-val" id="noveltyIndexVal">91%</div>
+                  <div class="audit-metric-lbl">Novelty Index</div>
+                </div>
+                <div class="audit-metric">
+                  <div class="audit-metric-val" id="verbatimMatchVal">0.0%</div>
+                  <div class="audit-metric-lbl">Verbatim Match</div>
+                </div>
+                <div class="audit-metric">
+                  <div class="audit-metric-val" id="abstractionThresholdVal">98.4%</div>
+                  <div class="audit-metric-lbl">Abstraction</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="genome-data.js"></script>
+  <script src="genome-graph.js"></script>
+  <script src="synthesizer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
