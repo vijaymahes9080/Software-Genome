@@ -1,0 +1,34 @@
+{
+  "name": "software-genome",
+  "version": "1.0.0",
+  "description": "AI-native software engineering platform that learns the DNA of software and synthesizes novel application architectures.",
+  "main": "app.js",
+  "bin": {
+    "sgx": "./bin/sgx.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "cli": "node ./bin/sgx.js",
+    "build": "echo 'Software Genome ready for deployment'"
+  },
+  "keywords": [
+    "software-genome",
+    "ai-architecture",
+    "reverse-engineering",
+    "code-synthesis",
+    "postgis",
+    "gene-mutation"
+  ],
+  "author": "Vijay Mahes <Vijaypradhap2004@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "pg": "^8.11.5",
+    "redis": "^4.6.13"
+  },
+  "devDependencies": {
+    "supertest": "^6.3.4"
+  }
+}
