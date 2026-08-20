@@ -1,0 +1,12 @@
+{
+    "name": "vijaymahes9080/software-genome",
+    "description": "Software Genome Project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Vijay Mahes",
+            "email": "Vijaypradhap2004@gmail.com"
+        }
+    ],
+    "require": {}
+}
