@@ -16,6 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
   renderBenchmarkApps();
   renderGenomeLayers();
   
+  // Theme Toggle Listener
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const themeToggleIcon = document.getElementById('themeToggleIcon');
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('theme-light');
+      const isLight = document.body.classList.contains('theme-light');
+      if (themeToggleIcon) {
+        themeToggleIcon.innerText = isLight ? '🌙 Dark Mode' : '☀️ Light Mode';
+      }
+      if (graphInstance) graphInstance.render();
+    });
+  }
+
   // Initialize Genome Graph
   graphInstance = new GenomeGraph('genomeGraphCanvas');
   if (window.SGX_GRAPH_NODES && window.SGX_GRAPH_EDGES) {

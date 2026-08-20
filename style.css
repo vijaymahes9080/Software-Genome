@@ -32,6 +32,24 @@
   padding: 0;
 }
 
+body.theme-light {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --border-color: #e2e8f0;
+  --border-glow: rgba(79, 70, 229, 0.4);
+
+  --accent-cyan: #2563eb;
+  --accent-blue: #3b82f6;
+  --accent-violet: #7c3aed;
+  --accent-emerald: #059669;
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-main);
@@ -39,6 +57,7 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Scrollbar styling */
