@@ -351,5 +351,4 @@ class GenomeGraph {
   }
 }
 
-const globalObj = typeof window !== 'undefined' ? window : global;
-globalObj.GenomeGraph = GenomeGraph;
+(typeof window !== 'undefined' ? window : global).GenomeGraph = GenomeGraph;

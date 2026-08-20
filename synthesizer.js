@@ -451,5 +451,4 @@ CMD ["node", "server.js"]
   }
 }
 
-const globalObj = typeof window !== 'undefined' ? window : global;
-globalObj.GenomeSynthesizer = GenomeSynthesizer;
+(typeof window !== 'undefined' ? window : global).GenomeSynthesizer = GenomeSynthesizer;

@@ -845,7 +845,7 @@ const GENOME_GRAPH_INITIAL_EDGES = [
   { source: "node-hotpads", target: "gene-perf-tile", label: "extracts" }
 ];
 
-const globalObj = typeof window !== 'undefined' ? window : global;
-globalObj.SGX_BENCHMARK_APPS = BENCHMARK_APPS;
-globalObj.SGX_GRAPH_NODES = GENOME_GRAPH_INITIAL_NODES;
-globalObj.SGX_GRAPH_EDGES = GENOME_GRAPH_INITIAL_EDGES;
+const _globalObj = typeof window !== 'undefined' ? window : global;
+_globalObj.SGX_BENCHMARK_APPS = BENCHMARK_APPS;
+_globalObj.SGX_GRAPH_NODES = GENOME_GRAPH_INITIAL_NODES;
+_globalObj.SGX_GRAPH_EDGES = GENOME_GRAPH_INITIAL_EDGES;
