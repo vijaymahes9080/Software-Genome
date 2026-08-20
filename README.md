@@ -12,6 +12,16 @@
 
 ---
 
+![Software Genome Light Theme Hero Banner](images/hero.png)
+
+## 🎨 Visual Showcase & Architecture Pipeline
+
+| Light Theme Software Studio | 8-Layer Synthesis Pipeline |
+| :---: | :---: |
+| ![Light Theme Studio UI](images/ui-showcase.png) | ![Pipeline Architecture Diagram](images/pipeline-diagram.png) |
+
+---
+
 ## 🎯 Core Differentiator
 
 Don't make it: *"Upload apps → AI copies them."*  
